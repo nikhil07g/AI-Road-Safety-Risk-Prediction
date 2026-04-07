@@ -1,0 +1,30 @@
+# Large files - exceeds GitHub's 100MB limit
+US_Accidents_March23.csv
+road_quality_dataset/road_quality_data.npz
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
