@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+frontend/.env
+node_modules/
+frontend/dist/.vite/
+backend/road_quality_dataset/road_quality_data.npz

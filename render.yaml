@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: road-risk-ai
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.start_server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: CHATBOT_API_KEY
+        sync: false
