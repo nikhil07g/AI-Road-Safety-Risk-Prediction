@@ -1,0 +1,11 @@
+{
+  "name": "road-risk-ai-deployment",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "build": "node -e \"console.log('Deploying the prebuilt frontend')\""
+  }
+}

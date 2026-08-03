@@ -182,6 +182,23 @@ async def current_weather(lat: float, lon: float):
     except httpx.HTTPError as error:
         raise HTTPException(status_code=502, detail="Weather service request failed") from error
 
+
+@app.get("/api/dataset-stats")
+async def dataset_stats():
+    """Summary values shown on the web dashboard."""
+    return {
+        "totalAccidents": 4_000_000,
+        "topCause": "Weather & Road Conditions",
+        "weekdayRisk": "High (30% more accidents)",
+        "nightRiskIncrease": "3x more accidents at night",
+        "weatherImpact": {
+            "rain": "increases accidents by 45%",
+            "fog": "increases accidents by 55%",
+            "snow": "increases accidents by 120%",
+        },
+        "speedImpact": "exponential increase above 100 km/h",
+    }
+
 @app.post("/api/predict-road-quality")
 async def predict_road_quality(file: UploadFile = File(...)):
     """
